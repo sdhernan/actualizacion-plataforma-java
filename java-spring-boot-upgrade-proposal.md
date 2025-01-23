@@ -41,8 +41,8 @@
 9. [Fechas de Soporte de Spring Boot](#fechas-de-soporte-de-spring-boot)
 10. [Riesgos y Mitigación](#riesgos-y-mitigación)
 11. [Recursos Necesarios](#recursos-necesarios)
-12. [Conclusión](#conclusión)
-13. [Aplicabilidad en Proyectos PORTABILIDAD PEMEX](#aplicabilidad-en-proyectos-portabilidad-pemex)
+12. [Aplicabilidad en Proyectos PORTABILIDAD PEMEX](#aplicabilidad-en-proyectos-portabilidad-pemex)
+13. [Conclusión](#conclusión)
 14. [Referencias](#referencias)
 15. [Diagramas de Arquitectura](#diagramas-de-arquitectura)
 
@@ -892,9 +892,6 @@ Debido a la naturaleza del proyecto, con pocos endpoints REST y dependencias act
 3. DevOps
 4. Infraestructura para pruebas
 
-## Conclusión
-La actualización propuesta fortalecerá significativamente nuestra plataforma, mejorando la seguridad, rendimiento y mantenibilidad. El plan estructurado minimiza los riesgos y asegura una transición suave.
-
 ## Aplicabilidad en Proyectos PORTABILIDAD PEMEX
 
 ### Descripción de Proyectos
@@ -984,6 +981,9 @@ Los proyectos de PORTABILIDAD PEMEX son servicios REST relativamente nuevos que 
    - Mejor soporte y mantenimiento
    - Mayor facilidad de desarrollo
    - Preparación para futuras actualizaciones
+
+## Conclusión
+La actualización propuesta fortalecerá significativamente nuestra plataforma, mejorando la seguridad, rendimiento y mantenibilidad. El plan estructurado minimiza los riesgos y asegura una transición suave.
 
 ## Referencias
 
