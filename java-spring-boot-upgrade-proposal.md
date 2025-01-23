@@ -42,8 +42,9 @@
 10. [Riesgos y Mitigación](#riesgos-y-mitigación)
 11. [Recursos Necesarios](#recursos-necesarios)
 12. [Conclusión](#conclusión)
-13. [Referencias](#referencias)
-14. [Diagramas de Arquitectura](#diagramas-de-arquitectura)
+13. [Aplicabilidad en Proyectos PORTABILIDAD PEMEX](#aplicabilidad-en-proyectos-portabilidad-pemex)
+14. [Referencias](#referencias)
+15. [Diagramas de Arquitectura](#diagramas-de-arquitectura)
 
 ## Resumen
 Este documento detalla la propuesta para actualizar la plataforma API-Citibanamex de Java 8 a Java 11 y Spring Boot 2.1.x a 2.7.x. Esta actualización es necesaria para mejorar la seguridad, rendimiento y mantener la compatibilidad con las últimas tecnologías, además de preparar el proyecto para una futura migración a GitHub.
@@ -393,9 +394,9 @@ Actualmente se cuenta con tres versiones del POM padre:
    - Eliminación de dependencias obsoletas o redundantes
 
 2. **Mejoras de Seguridad**
-   - Actualización a versiones más seguras de componentes
-   - Mejor gestión de vulnerabilidades conocidas
-   - Implementación de mejores prácticas de seguridad
+   - Actualización de componentes críticos
+   - Eliminación de dependencias vulnerables
+   - Mejor gestión de autenticación y autorización
 
 3. **Optimización de Rendimiento**
    - Versiones más eficientes de librerías core
@@ -654,7 +655,7 @@ graph TB
     end
 
     subgraph "Database"
-        G[Oracle JDBC 8]
+        G[Oracle JDBC (ojdbc) 8]
         H[Connection Pool]
     end
 
@@ -682,7 +683,7 @@ graph TB
     end
 
     subgraph "Database"
-        G[Oracle JDBC 19]
+        G[Oracle JDBC (ojdbc) 19]
         H[HikariCP]
     end
 
@@ -705,7 +706,7 @@ flowchart LR
 
     subgraph "Infrastructure"
         D[Spring Boot 2.7.x]
-        E[Oracle JDBC 19]
+        E[Oracle JDBC (ojdbc) 19]
         F[WebLogic 14.1.1]
     end
 
@@ -763,7 +764,7 @@ mindmap
             [Spring WebServices]
         (Data)
             [Hibernate 5.6.x]
-            [Oracle JDBC 19]
+            [Oracle JDBC (ojdbc) 19]
             [HikariCP]
         (Testing)
             [JUnit 5.8.x]
@@ -870,6 +871,96 @@ Debido a la naturaleza del proyecto, con pocos endpoints REST y dependencias act
 
 ## Conclusión
 La actualización propuesta fortalecerá significativamente nuestra plataforma, mejorando la seguridad, rendimiento y mantenibilidad. El plan estructurado minimiza los riesgos y asegura una transición suave.
+
+## Aplicabilidad en Proyectos PORTABILIDAD PEMEX
+
+### Descripción de Proyectos
+Los proyectos de PORTABILIDAD PEMEX son servicios REST relativamente nuevos que incluyen:
+- Servicios transaccionales
+- APIs RESTful
+- Integración con sistemas externos
+- Manejo de datos sensibles
+- Procesamiento asíncrono
+
+### Beneficios Específicos para PORTABILIDAD PEMEX
+
+1. **Mejoras en Rendimiento**
+   - Optimización de conexiones de base de datos con HikariCP
+   - Mejor manejo de concurrencia en Java 11
+   - Reducción en tiempos de respuesta de servicios REST
+   - Procesamiento más eficiente de transacciones
+
+2. **Seguridad Mejorada**
+   - Implementación de últimas prácticas de seguridad
+   - Mejor manejo de autenticación y autorización
+   - Protección mejorada para datos sensibles
+   - Actualizaciones de seguridad automatizadas
+
+3. **Características Modernas**
+   - Soporte mejorado para operaciones asíncronas
+   - Mejor manejo de JSON y serialización
+   - APIs más robustas y documentadas
+   - Integración optimizada con servicios externos
+
+4. **Mantenibilidad**
+   - Código más limpio y moderno
+   - Mejor gestión de dependencias
+   - Documentación automática de APIs
+   - Pruebas más eficientes
+
+### Consideraciones Específicas
+
+1. **Transaccionalidad**
+   - Soporte mejorado para transacciones distribuidas
+   - Mejor manejo de rollbacks
+   - Monitoreo de transacciones más detallado
+   - Optimización de rendimiento transaccional
+
+2. **Integración**
+   - Mejoras en la integración con sistemas externos
+   - Mejor manejo de timeouts y reintentos
+   - Logging más detallado de integraciones
+   - Monitoreo en tiempo real
+
+3. **Escalabilidad**
+   - Mejor soporte para contenedores
+   - Escalado horizontal simplificado
+   - Gestión de recursos optimizada
+   - Balanceo de carga mejorado
+
+### Recomendaciones de Implementación
+
+1. **Fase de Migración**
+   - Actualización gradual por servicios
+   - Pruebas exhaustivas de integración
+   - Validación de performance
+   - Monitoreo continuo
+
+2. **Optimizaciones**
+   - Configuración de pools de conexiones
+   - Ajuste de timeouts
+   - Optimización de cachés
+   - Configuración de logging
+
+3. **Monitoreo**
+   - Implementación de métricas específicas
+   - Alertas personalizadas
+   - Dashboard de transacciones
+   - Seguimiento de integraciones
+
+### Impacto en el Negocio
+
+1. **Ventajas Operativas**
+   - Mayor estabilidad del sistema
+   - Tiempos de respuesta mejorados
+   - Mejor experiencia de usuario
+   - Reducción de incidentes
+
+2. **Beneficios Técnicos**
+   - Stack tecnológico actualizado
+   - Mejor soporte y mantenimiento
+   - Mayor facilidad de desarrollo
+   - Preparación para futuras actualizaciones
 
 ## Referencias
 
