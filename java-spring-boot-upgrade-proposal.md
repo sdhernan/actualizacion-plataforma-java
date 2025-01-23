@@ -41,7 +41,7 @@
 9. [Fechas de Soporte de Spring Boot](#fechas-de-soporte-de-spring-boot)
 10. [Riesgos y Mitigación](#riesgos-y-mitigación)
 11. [Recursos Necesarios](#recursos-necesarios)
-12. [Aplicabilidad en Otros Proyectos Empresariales](#aplicabilidad-en-otros-proyectos-empresariales)
+12. [Aplicabilidad en Otros Proyectos](#aplicabilidad-en-otros-proyectos)
 13. [Conclusión](#conclusión)
 14. [Referencias](#referencias)
 15. [Diagramas de Arquitectura](#diagramas-de-arquitectura)
@@ -892,12 +892,12 @@ Debido a la naturaleza del proyecto, con pocos endpoints REST y dependencias act
 3. DevOps
 4. Infraestructura para pruebas
 
-## Aplicabilidad en Otros Proyectos Empresariales
+## Aplicabilidad en Otros Proyectos
 
 ### Alcance de Aplicación
-Esta propuesta de actualización tecnológica, además de su objetivo principal, puede servir como referencia estratégica para otros proyectos empresariales. Por ejemplo, proyectos como los servicios de PORTABILIDAD PEMEX podrían beneficiarse de estas mejoras tecnológicas. La modernización del stack es especialmente relevante para:
+Esta propuesta de actualización tecnológica, además de su objetivo principal, puede servir como referencia estratégica para otros proyectos. Por ejemplo, proyectos como los servicios de PORTABILIDAD PEMEX podrían beneficiarse de estas mejoras tecnológicas. La modernización del stack es especialmente relevante para:
 
-- **Servicios REST Empresariales**
+- **Servicios REST**
   - Aplicaciones nuevas y existentes
   - Microservicios distribuidos
   - APIs de alto rendimiento
@@ -907,13 +907,13 @@ Esta propuesta de actualización tecnológica, además de su objetivo principal,
   - Procesamiento de pagos
   - Gestión de datos críticos
 
-- **Integraciones Empresariales**
+- **Integraciones**
   - Conexiones con sistemas legacy
   - Interfaces con servicios externos
   - Procesamiento en tiempo real
 
 ### Características de Proyectos Compatibles
-Los proyectos empresariales modernos, como es el caso de los servicios de PORTABILIDAD PEMEX, suelen compartir características que los hacen candidatos ideales para esta actualización:
+Los proyectos modernos, como es el caso de los servicios de PORTABILIDAD PEMEX, suelen compartir características que los hacen candidatos ideales para esta actualización:
 - Arquitectura moderna basada en microservicios REST
 - Manejo de transacciones críticas de negocio
 - Integración con múltiples sistemas internos y externos
@@ -1058,3 +1058,5 @@ La actualización propuesta fortalecerá significativamente nuestra plataforma, 
 - [Spring Boot Support Policy](https://spring.io/projects/spring-boot#support)
 - [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)
 - [WebLogic Server Compatibility Matrix](https://www.oracle.com/middleware/technologies/weblogic-server/compatibility.html)
+
+```
