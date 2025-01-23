@@ -41,7 +41,7 @@
 9. [Fechas de Soporte de Spring Boot](#fechas-de-soporte-de-spring-boot)
 10. [Riesgos y Mitigación](#riesgos-y-mitigación)
 11. [Recursos Necesarios](#recursos-necesarios)
-12. [Aplicabilidad en Proyectos PORTABILIDAD PEMEX](#aplicabilidad-en-proyectos-portabilidad-pemex)
+12. [Aplicabilidad en Proyectos Empresariales y PORTABILIDAD PEMEX](#aplicabilidad-en-proyectos-empresariales-y-portabilidad-pemex)
 13. [Conclusión](#conclusión)
 14. [Referencias](#referencias)
 15. [Diagramas de Arquitectura](#diagramas-de-arquitectura)
@@ -892,15 +892,45 @@ Debido a la naturaleza del proyecto, con pocos endpoints REST y dependencias act
 3. DevOps
 4. Infraestructura para pruebas
 
-## Aplicabilidad en Proyectos PORTABILIDAD PEMEX
+## Aplicabilidad en Proyectos Empresariales y PORTABILIDAD PEMEX
 
-### Descripción de Proyectos
-Los proyectos de PORTABILIDAD PEMEX son servicios REST relativamente nuevos que incluyen:
-- Servicios transaccionales
-- APIs RESTful
-- Integración con sistemas externos
-- Manejo de datos sensibles
-- Procesamiento asíncrono
+### Alcance de Aplicación
+Esta propuesta de actualización tecnológica debe considerarse como una guía estratégica para múltiples proyectos empresariales, incluyendo pero no limitándose a PORTABILIDAD PEMEX. La modernización del stack tecnológico es especialmente relevante para:
+
+- **Servicios REST Empresariales**
+  - Aplicaciones nuevas y existentes
+  - Microservicios distribuidos
+  - APIs de alto rendimiento
+
+- **Sistemas Transaccionales**
+  - Operaciones financieras
+  - Procesamiento de pagos
+  - Gestión de datos críticos
+
+- **Integraciones Empresariales**
+  - Conexiones con sistemas legacy
+  - Interfaces con servicios externos
+  - Procesamiento en tiempo real
+
+### Descripción de Proyectos Objetivo
+Los proyectos como PORTABILIDAD PEMEX representan una nueva generación de servicios empresariales caracterizados por:
+- Arquitectura moderna basada en microservicios REST
+- Manejo de transacciones críticas de negocio
+- Integración con múltiples sistemas internos y externos
+- Procesamiento de datos en tiempo real
+- Requisitos estrictos de seguridad y auditoría
+- Alta disponibilidad y escalabilidad horizontal
+- Operaciones asíncronas y procesamiento batch
+
+### Descripción de Proyectos Objetivo
+Los proyectos como PORTABILIDAD PEMEX representan una nueva generación de servicios empresariales caracterizados por:
+- Arquitectura moderna basada en microservicios REST
+- Manejo de transacciones críticas de negocio
+- Integración con múltiples sistemas internos y externos
+- Procesamiento de datos en tiempo real
+- Requisitos estrictos de seguridad y auditoría
+- Alta disponibilidad y escalabilidad horizontal
+- Operaciones asíncronas y procesamiento batch
 
 ### Beneficios Específicos para PORTABILIDAD PEMEX
 
