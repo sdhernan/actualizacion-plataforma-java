@@ -398,21 +398,27 @@ Actualmente se cuenta con tres versiones del POM padre:
    - Implementación de mejores prácticas de seguridad
 
 3. **Optimización de Rendimiento**
+   - Versiones más eficientes de librerías core
    - Mejor gestión de memoria
-   - Reducción de tiempo de inicio de aplicación
-   - Optimización de operaciones I/O
+   - Reducción de overhead por dependencias
 
 4. **Compatibilidad**
-   - Soporte mejorado para contenedores
-   - Compatibilidad verificada con WebLogic
-   - Preparación para futuras actualizaciones
+   - **JDK 8**: Optimizado para WebLogic 12.2.1.3
+     - Exclusiones específicas para evitar conflictos
+     - Configuración de classloader
+     - Manejo de dependencias compartidas
+
+   - **JDK 11**: Adaptado para WebLogic 14.1.1
+     - Soporte para módulos Java
+     - Configuración Jakarta EE
+     - Manejo de nuevas especificaciones
 
 ### Recomendaciones para Despliegue
 
 1. **Fase de Pruebas**
    - Pruebas exhaustivas en ambiente QA
    - Validación de rendimiento
-   - Pruebas de integración con sistemas externos
+   - Pruebas de integración específicas
 
 2. **Monitoreo**
    - Implementación de métricas detalladas
@@ -866,8 +872,55 @@ Debido a la naturaleza del proyecto, con pocos endpoints REST y dependencias act
 La actualización propuesta fortalecerá significativamente nuestra plataforma, mejorando la seguridad, rendimiento y mantenibilidad. El plan estructurado minimiza los riesgos y asegura una transición suave.
 
 ## Referencias
+
+### Documentación Oficial
 - [Java 11 Release Notes](https://www.oracle.com/java/technologies/javase/11-relnote-issues.html)
+- [Java 11 Migration Guide](https://www.oracle.com/java/technologies/javase/11-migration-guide.html)
 - [Spring Boot 2.7.x Documentation](https://docs.spring.io/spring-boot/docs/2.7.x/reference/html/)
 - [Spring Boot Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes)
+- [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/)
+- [Oracle WebLogic Server Documentation](https://docs.oracle.com/en/middleware/technologies/weblogic-server/index.html)
 
-```
+### Base de Datos y Persistencia
+- [Oracle Database 19c Documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/index.html)
+- [Oracle JDBC Driver Documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/jjdbc/)
+- [HikariCP Documentation](https://github.com/brettwooldridge/HikariCP)
+- [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+
+### Seguridad
+- [Spring Security Documentation](https://docs.spring.io/spring-security/reference/index.html)
+- [OWASP Java Security Guidelines](https://owasp.org/www-project-proactive-controls/)
+- [Java Security Coding Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+
+### Rendimiento y Monitoreo
+- [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
+- [Micrometer Documentation](https://micrometer.io/docs)
+- [Java 11 Performance Improvements](https://docs.oracle.com/en/java/javase/11/gctuning/)
+
+### Herramientas y Utilidades
+- [Maven Documentation](https://maven.apache.org/guides/)
+- [ModelMapper Documentation](https://modelmapper.org/user-manual/)
+- [Google Guava Wiki](https://github.com/google/guava/wiki)
+- [Apache Commons Documentation](https://commons.apache.org/proper/commons-lang/)
+
+### Mejores Prácticas
+- [Spring Boot Best Practices](https://docs.spring.io/spring-boot/docs/current/reference/html/best-practices.html)
+- [Java Code Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)
+- [Twelve-Factor App Methodology](https://12factor.net/)
+- [Clean Code in Java](https://www.baeldung.com/java-clean-code)
+
+### Artículos y Guías
+- [Baeldung - Spring Boot Migration](https://www.baeldung.com/spring-boot-migration)
+- [DZone - Java 11 Features](https://dzone.com/articles/java-11-features)
+- [InfoQ - Spring Boot 2.7 Release](https://www.infoq.com/news/2022/05/spring-boot-2.7-released/)
+- [Oracle Blog - Java 11 for Enterprise](https://blogs.oracle.com/java/post/java-11-for-enterprise-systems)
+
+### Herramientas de Diagramación
+- [Mermaid JS Documentation](https://mermaid.js.org/intro/)
+- [C4 Model for Software Architecture](https://c4model.com/)
+- [PlantUML Documentation](https://plantuml.com/)
+
+### Compatibilidad y Soporte
+- [Spring Boot Support Policy](https://spring.io/projects/spring-boot#support)
+- [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)
+- [WebLogic Server Compatibility Matrix](https://www.oracle.com/middleware/technologies/weblogic-server/compatibility.html)
