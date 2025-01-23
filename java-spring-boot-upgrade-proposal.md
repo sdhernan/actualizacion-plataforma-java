@@ -655,7 +655,7 @@ graph TB
     end
 
     subgraph "Database"
-        G[Oracle JDBC (ojdbc) 8]
+        G[Oracle JDBC Driver 8]
         H[Connection Pool]
     end
 
@@ -664,6 +664,10 @@ graph TB
     A --> F
     F --> G
     G --> H
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
 ### Estructura de Dependencias Actualizada (2.7.x)
@@ -683,7 +687,7 @@ graph TB
     end
 
     subgraph "Database"
-        G[Oracle JDBC (ojdbc) 19]
+        G[Oracle JDBC Driver 19]
         H[HikariCP]
     end
 
@@ -692,6 +696,10 @@ graph TB
     A --> F
     F --> G
     G --> H
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
 ### Flujo de Componentes
@@ -706,7 +714,7 @@ flowchart LR
 
     subgraph "Infrastructure"
         D[Spring Boot 2.7.x]
-        E[Oracle JDBC (ojdbc) 19]
+        E[Oracle JDBC 19]
         F[WebLogic 14.1.1]
     end
 
@@ -725,29 +733,44 @@ flowchart LR
     G --> H
     G --> I
     H --> A
+
+    style A fill:#f96,stroke:#333,stroke-width:2px
+    style D fill:#9cf,stroke:#333,stroke-width:2px
+    style G fill:#9f9,stroke:#333,stroke-width:2px
 ```
 
-### Arquitectura de Componentes
+### Arquitectura de Sistema
 
 ```mermaid
-C4Context
-    title Arquitectura de Sistema Actualizado
+graph TB
+    subgraph "Frontend"
+        A[API Gateway]
+        B[Load Balancer]
+    end
 
-    Enterprise_Boundary(b0, "Enterprise") {
-        System_Boundary(b1, "API-Citibanamex") {
-            Container(web_app, "Aplicación Web", "Spring Boot 2.7.x", "Provee funcionalidad REST")
-            Container(auth, "Autenticación", "Spring Security 5.7.x", "Maneja seguridad")
-            Container(db, "Base de Datos", "Oracle 19c", "Almacena datos")
-        }
+    subgraph "Backend Services"
+        C[REST APIs]
+        D[Business Logic]
+        E[Data Access]
+    end
 
-        System_Ext(weblogic, "WebLogic 14.1.1", "Servidor de Aplicaciones")
-        System_Ext(monitoring, "Monitoreo", "Actuator/Micrometer")
-    }
+    subgraph "Infrastructure"
+        F[Database]
+        G[Cache]
+        H[Message Queue]
+    end
 
-    Rel(web_app, auth, "Usa")
-    Rel(web_app, db, "Lee/Escribe")
-    Rel(weblogic, web_app, "Despliega")
-    Rel(monitoring, web_app, "Monitorea")
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    D --> H
+
+    style A fill:#f96,stroke:#333,stroke-width:2px
+    style C fill:#9cf,stroke:#333,stroke-width:2px
+    style F fill:#9f9,stroke:#333,stroke-width:2px
 ```
 
 ### Diagrama de Dependencias Principales
@@ -764,7 +787,7 @@ mindmap
             [Spring WebServices]
         (Data)
             [Hibernate 5.6.x]
-            [Oracle JDBC (ojdbc) 19]
+            [Oracle JDBC 19]
             [HikariCP]
         (Testing)
             [JUnit 5.8.x]
